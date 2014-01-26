@@ -1,0 +1,27 @@
+{
+    "name": "wotek/settings",
+    "description": "Settings library which supports multiple data providers.",
+    "keywords": ["settings", "settings provider", "settings cloud"],
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Wojtek Zalewski",
+            "email": "wojtek@neverbland.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4",
+        "wotek/redis": "dev-master",
+        "symfony/console": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Wtk\\Settings\\Tests": "tests/",
+            "Wtk\\Settings": "src/"
+        }
+    }
+}
