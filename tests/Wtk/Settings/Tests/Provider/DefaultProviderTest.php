@@ -11,7 +11,7 @@ class DefaultProviderTest extends SettingsTestCase
 
     public function getProvider($storage)
     {
-        return new DefaultProvider($storage);
+        return new DefaultProvider('default', $storage);
     }
 
     public function testGet()
@@ -91,15 +91,5 @@ class DefaultProviderTest extends SettingsTestCase
         $provider = $this->getProvider($storage);
 
         $this->assertSame('default', $provider->getNamespace());
-    }
-
-    public function testSetNamespace()
-    {
-        $storage = $this->getStorageMock();
-        $provider = $this->getProvider($storage);
-
-        $provider->setNamespace('Neverbland');
-
-        $this->assertSame('Neverbland', $provider->getNamespace());
     }
 }

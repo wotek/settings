@@ -11,9 +11,4 @@ use Wtk\Settings\Storage\StorageInterface;
  */
 interface StorageAwareProviderInterface
 {
-    /**
-     *
-     * @param  StorageInterface $storage
-     */
-    function __construct(StorageInterface $storage);
 }

@@ -16,15 +16,6 @@ abstract class StorageAwareProvider implements StorageAwareProviderInterface
     protected $storage;
 
     /**
-     *
-     * @param  StorageInterface $storage
-     */
-    public function __construct(StorageInterface $storage)
-    {
-        $this->storage = $storage;
-    }
-
-    /**
      * Returns settings storage
      *
      * @return StorageInterface

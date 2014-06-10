@@ -3,7 +3,8 @@
 namespace Wtk\Settings\Provider;
 
 use Wtk\Settings\Provider\ProviderInterface,
-    Wtk\Settings\Provider\StorageAwareProvider;
+    Wtk\Settings\Provider\StorageAwareProvider,
+    Wtk\Settings\Storage\StorageInterface;
 
 /**
  * Default providers stores data in settings table.
@@ -17,16 +18,17 @@ class DefaultProvider extends StorageAwareProvider implements ProviderInterface
      *
      * @var string
      */
-    protected $namespace = 'default';
+    protected $namespace;
 
     /**
-     * Sets providers' namespace
      *
-     * @param  string     $namespace
+     * @param  string           $namespace
+     * @param  StorageInterface $storage
      */
-    public function setNamespace($namespace)
+    public function __construct($namespace, StorageInterface $storage)
     {
         $this->namespace = $namespace;
+        $this->storage = $storage;
     }
 
     /**
