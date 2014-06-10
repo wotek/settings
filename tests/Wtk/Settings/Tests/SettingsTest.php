@@ -177,7 +177,7 @@ class SettingsTest extends SettingsTestCase
     {
         $storage = $this->getStorageMock();
 
-        $provider = new DefaultProvider($storage);
+        $provider = new DefaultProvider('default', $storage);
 
         $settings = $this->getSettingsStub(
             array($provider),
@@ -196,7 +196,7 @@ class SettingsTest extends SettingsTestCase
 
         $storage = $this->getStorageMock();
 
-        $provider = new DefaultProvider($storage);
+        $provider = new DefaultProvider('default', $storage);
 
         $settings = $this->getSettingsStub(
             array($provider),

@@ -9,8 +9,7 @@
    processIsolation="false"
    stopOnFailure="false"
    syntaxCheck="false"
-   bootstrap="tests/bootstrap.php"
-   >
+   bootstrap="tests/bootstrap.php">
 
     <testsuites>
         <testsuite name="Settings Test Suite">
@@ -24,6 +23,8 @@
             <exclude>
                 <directory>./tests</directory>
                 <directory>./vendor</directory>
+                <directory>./doc</directory>
+                <directory>./bin</directory>
             </exclude>
         </whitelist>
     </filter>

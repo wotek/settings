@@ -22,7 +22,7 @@ class RepositoryTest extends SettingsTestCase
 
     public function testGetSimple()
     {
-        $hash = $this->getHashMock(array('get'));
+        $hash = $this->getHashMock();
 
 
         $key = 'some_key';
@@ -45,7 +45,7 @@ class RepositoryTest extends SettingsTestCase
 
     public function testGetNested()
     {
-        $hash = $this->getHashMock(array('get', 'fields'));
+        $hash = $this->getHashMock();
 
 
         $key = 'some.path.with.nested.paths';
@@ -83,7 +83,7 @@ class RepositoryTest extends SettingsTestCase
 
     public function testRemoveSimple()
     {
-        $hash = $this->getHashMock(array('remove'));
+        $hash = $this->getHashMock();
 
 
         $key = 'some.path.to.setting';
@@ -102,7 +102,7 @@ class RepositoryTest extends SettingsTestCase
 
     public function testRemoveNested()
     {
-        $hash = $this->getHashMock(array('remove', 'mremove', 'fields'));
+        $hash = $this->getHashMock();
 
 
         $key = 'some.path.with.nested.paths';
@@ -150,7 +150,7 @@ class RepositoryTest extends SettingsTestCase
 
     public function testSet()
     {
-        $hash = $this->getHashMock(array('set'));
+        $hash = $this->getHashMock();
 
 
         $key = 'some_key';
