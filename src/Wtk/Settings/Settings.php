@@ -94,9 +94,10 @@ class Settings extends ProvidersAwareSettings implements SettingsInterface
             //
             // @author Wojtek Zalewski <wojtek@neverbland.com>
             //
-            throw new \InvalidArgumentException(
-                "Invalid key given. Given path exists and have nested keys'. \nRemove it before and try to set it up again."
-            );
+            throw new \InvalidArgumentException(sprintf(
+                "Invalid key given. Given path exists (%s) and have nested keys'. \nRemove it before and try to set it up again.",
+                $key
+            ));
         }
 
         return true;
